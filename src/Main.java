@@ -9,7 +9,7 @@ public class Main {
             BipartiteGraph bg = new BipartiteGraph(g);
             System.out.print(bg);
             System.out.println('\n');
-            Kuhn k = new Kuhn(bg);
+            Kuhn k = new Kuhn(bg,true);
             k.run();
         } catch (Exception e) {
             System.err.println(e.getMessage());
