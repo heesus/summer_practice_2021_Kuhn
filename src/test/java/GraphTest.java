@@ -53,4 +53,14 @@ public class GraphTest{
             Assertions.assertNotEquals("", ex.getMessage());
         }
     }
+    @Test
+    public void runTest6() {
+        try {
+            Graph g = new Graph();
+            g.addEdge("1", " ");
+            BipartiteGraph bg = new BipartiteGraph(g);
+        }catch (Exception ex){
+            Assertions.assertNotEquals("", ex.getMessage());
+        }
+    }
 }
