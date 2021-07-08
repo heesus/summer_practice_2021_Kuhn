@@ -11,7 +11,7 @@ public class BipartiteGraph extends Graph {
         part2 = new HashMap<>();
     }
 
-    public BipartiteGraph(Graph g) throws IllegalArgumentException { //создание подобного графа
+    public BipartiteGraph(Graph g) { //создание подобного графа
         super(g); // создание копии исходного графа
         part1 = new HashMap<>();
         part2 = new HashMap<>();
