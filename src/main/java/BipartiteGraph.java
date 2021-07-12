@@ -5,16 +5,21 @@ import java.util.TreeSet;
 
 public class BipartiteGraph extends Graph {
     private HashMap<String, Vertex> part1, part2; //доли графа
+    public Vertex activeEdgeV1, activeEdgeV2;
+    public HashMap<Vertex, Vertex> currentMatching;
 
     public BipartiteGraph() {  //создание пустого двудольного графа
         part1 = new HashMap<>();
         part2 = new HashMap<>();
     }
+    
+    
 
     public BipartiteGraph(Graph g) { //создание подобного графа
         super(g); // создание копии исходного графа
         part1 = new HashMap<>();
         part2 = new HashMap<>();
+        currentMatching = new HashMap<>();
         paintGraph(this);  //вершины окрашиваются
         for (Vertex v : getVertices()) {
             if (v.color % 2 == 0) { // четные вершины добавляются в 1 долю
@@ -22,8 +27,19 @@ public class BipartiteGraph extends Graph {
             } else {
                 part2.put(v.name, v); // нечетные добавляются во 2 долю
             }
-
         }
+    }
+    
+    public BipartiteGraph(BipartiteGraph g) {
+        super(g);
+        part1 = new HashMap<>();
+        part2 = new HashMap<>();
+        currentMatching = new HashMap<>();
+        part1 = g.part1;
+        part2 = g.part2;
+        currentMatching = g.currentMatching;
+        activeEdgeV1 = g.activeEdgeV1;
+        activeEdgeV2 = g.activeEdgeV2;
     }
     
     public Vertex addVertexPart1(String name) { //добавление вершины в 1 долю графа
