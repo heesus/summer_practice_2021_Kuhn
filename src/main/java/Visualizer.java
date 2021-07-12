@@ -98,7 +98,6 @@ public class Visualizer extends JPanel {
 
             setActiveEdge(graph.activeEdgeV1, graph.activeEdgeV2);
             setCurrentMatching(graph.currentMatching);
-            System.out.println(graph.currentMatching);
             // подсчитываем координаты графа
             int y1 = vertexDiameter;
             int y2 = y1;
@@ -133,15 +132,12 @@ public class Visualizer extends JPanel {
 
     public void setGraph(BipartiteGraph bg) {
         graph = bg;
-        algorithm = null;
         revalidate();
         repaint();
     }
 
     public void start() {
         algorithm = new Kuhn(graph);
-        revalidate();
-        repaint();
     }
 
     public String getNextHint() {

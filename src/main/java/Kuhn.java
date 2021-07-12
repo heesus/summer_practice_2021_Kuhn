@@ -36,7 +36,7 @@ public class Kuhn {
             }
         }
         sendActiveEdgeChanged(null, null);
-        sendHint(NEWLINE + "Алгоритм завершен" + NEWLINE + "_Результат алгоритма_" + NEWLINE + getMatching(), 0);
+        sendHint(NEWLINE + "Алгоритм завершен", 0);
         stop();
     }
 

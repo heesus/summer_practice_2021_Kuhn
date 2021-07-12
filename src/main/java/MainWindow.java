@@ -10,7 +10,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.util.HashMap;
 
 /**
  *
@@ -311,6 +310,7 @@ public class MainWindow extends JFrame {
         } else {
             acceptGraph();
             startAlgorithm();
+            hintTextArea.setText("");
         }
     }//GEN-LAST:event_acceptButtonActionPerformed
 
@@ -329,7 +329,6 @@ public class MainWindow extends JFrame {
             prevStepButton.setEnabled(true);
         }
 
-        //System.out.println(visual.getStepsCount());
         if (continuousRunning) {
             startVisualization();
         }
@@ -419,8 +418,7 @@ public class MainWindow extends JFrame {
 
     }
 
-    private Graph readGraph() {
-        Graph g = new Graph();
+    private Graph readGraph(Graph g) {
         String str = inputTextArea.getText();
         String lines[] = str.split("\\r?\\n");
         for (String line : lines) {
@@ -436,9 +434,11 @@ public class MainWindow extends JFrame {
 
     private void acceptGraph() {
         try {
-            Graph g = readGraph();
+            Graph g = new Graph();
+            readGraph(g);
             BipartiteGraph result = new BipartiteGraph(g);
-            this.visual.setGraph(result);
+            visual.stepIndex = 0;
+            visual.setGraph(result);
             beginVisualizationButton.setEnabled(true);
         } catch (IllegalArgumentException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
