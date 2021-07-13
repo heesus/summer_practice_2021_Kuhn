@@ -21,16 +21,14 @@ public class MainWindow extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        spareLabel = new java.awt.Label();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
-        jInternalFrame2 = new javax.swing.JInternalFrame();
+        inputDataDialog = new javax.swing.JDialog();
+        jPanel2 = new javax.swing.JPanel();
+        openButton = new javax.swing.JButton();
+        aceeptButton = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        inputTextArea = new javax.swing.JTextArea();
         mainPanel = new javax.swing.JPanel();
         modeTab = new javax.swing.JTabbedPane();
-        inputTab = new javax.swing.JPanel();
-        inputScrollPane = new javax.swing.JScrollPane();
-        inputTextArea = new javax.swing.JTextArea();
-        openButton = new javax.swing.JButton();
-        acceptButton = new javax.swing.JButton();
         displayTab = new javax.swing.JPanel();
         beginVisualizationButton = new javax.swing.JButton();
         stopButton = new javax.swing.JButton();
@@ -41,47 +39,14 @@ public class MainWindow extends JFrame {
         hintTextArea = new javax.swing.JTextArea();
         visualizationHintLabel = new java.awt.Label();
         jPanel1 = new javax.swing.JPanel();
+        inputDataButton = new javax.swing.JButton();
+        completeAutomaticallyButton = new javax.swing.JButton();
         resultTab = new javax.swing.JPanel();
         resultScrolPane = new javax.swing.JScrollPane();
         resultTextArea = new javax.swing.JTextArea();
 
-        spareLabel.setText("label1");
-
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jInternalFrame2.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
-        jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
-        jInternalFrame2Layout.setHorizontalGroup(
-            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame2Layout.setVerticalGroup(
-            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        modeTab.setToolTipText("");
-        modeTab.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        modeTab.setName(""); // NOI18N
-
-        inputTextArea.setColumns(20);
-        inputTextArea.setRows(5);
-        inputScrollPane.setViewportView(inputTextArea);
+        inputDataDialog.setLocation(new java.awt.Point(200, 200));
+        inputDataDialog.setSize(new java.awt.Dimension(400, 400));
 
         openButton.setText("Открыть");
         openButton.addActionListener(new java.awt.event.ActionListener() {
@@ -90,36 +55,62 @@ public class MainWindow extends JFrame {
             }
         });
 
-        acceptButton.setText("Применить");
-        acceptButton.addActionListener(new java.awt.event.ActionListener() {
+        aceeptButton.setText("Применить");
+        aceeptButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                acceptButtonActionPerformed(evt);
+                aceeptButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout inputTabLayout = new javax.swing.GroupLayout(inputTab);
-        inputTab.setLayout(inputTabLayout);
-        inputTabLayout.setHorizontalGroup(
-            inputTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(inputTabLayout.createSequentialGroup()
-                .addComponent(openButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(acceptButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(inputScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1033, Short.MAX_VALUE)
+        inputTextArea.setColumns(20);
+        inputTextArea.setRows(5);
+        jScrollPane2.setViewportView(inputTextArea);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 73, Short.MAX_VALUE)
+                        .addComponent(openButton)
+                        .addGap(69, 69, 69)
+                        .addComponent(aceeptButton)
+                        .addGap(78, 78, 78))))
         );
-        inputTabLayout.setVerticalGroup(
-            inputTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inputTabLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(inputTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(openButton)
-                    .addComponent(acceptButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(inputScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE))
+                    .addComponent(aceeptButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        modeTab.addTab("Ввод данных", inputTab);
+        javax.swing.GroupLayout inputDataDialogLayout = new javax.swing.GroupLayout(inputDataDialog.getContentPane());
+        inputDataDialog.getContentPane().setLayout(inputDataDialogLayout);
+        inputDataDialogLayout.setHorizontalGroup(
+            inputDataDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        inputDataDialogLayout.setVerticalGroup(
+            inputDataDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        modeTab.setToolTipText("");
+        modeTab.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        modeTab.setName(""); // NOI18N
 
         displayTab.setName(""); // NOI18N
 
@@ -131,7 +122,7 @@ public class MainWindow extends JFrame {
             }
         });
 
-        stopButton.setText("Остановить");
+        stopButton.setText("Закончить");
         stopButton.setEnabled(false);
         stopButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,8 +171,23 @@ public class MainWindow extends JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
+
+        inputDataButton.setText("Ввести данные");
+        inputDataButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputDataButtonActionPerformed(evt);
+            }
+        });
+
+        completeAutomaticallyButton.setText("Завершить автоматически");
+        completeAutomaticallyButton.setEnabled(false);
+        completeAutomaticallyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                completeAutomaticallyButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout displayTabLayout = new javax.swing.GroupLayout(displayTab);
         displayTab.setLayout(displayTabLayout);
@@ -189,19 +195,23 @@ public class MainWindow extends JFrame {
             displayTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(displayTabLayout.createSequentialGroup()
                 .addGroup(displayTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(displayTabLayout.createSequentialGroup()
                         .addGroup(displayTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(continiousCheckBox)
                             .addGroup(displayTabLayout.createSequentialGroup()
+                                .addComponent(inputDataButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(beginVisualizationButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(prevStepButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(stopButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nextStepButton))
-                            .addComponent(continiousCheckBox))
-                        .addGap(0, 246, Short.MAX_VALUE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(nextStepButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(completeAutomaticallyButton)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(displayTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(visualizationHintLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -215,7 +225,9 @@ public class MainWindow extends JFrame {
                     .addComponent(beginVisualizationButton)
                     .addComponent(stopButton)
                     .addComponent(prevStepButton)
-                    .addComponent(nextStepButton))
+                    .addComponent(nextStepButton)
+                    .addComponent(inputDataButton)
+                    .addComponent(completeAutomaticallyButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(continiousCheckBox)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -236,7 +248,7 @@ public class MainWindow extends JFrame {
         resultTab.setLayout(resultTabLayout);
         resultTabLayout.setHorizontalGroup(
             resultTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(resultScrolPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1033, Short.MAX_VALUE)
+            .addComponent(resultScrolPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1081, Short.MAX_VALUE)
         );
         resultTabLayout.setVerticalGroup(
             resultTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,6 +284,64 @@ public class MainWindow extends JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void continiousCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continiousCheckBoxActionPerformed
+        if (continiousCheckBox.isSelected()) {
+            nextStepButton.setEnabled(false);
+            prevStepButton.setEnabled(false);
+        }
+    }//GEN-LAST:event_continiousCheckBoxActionPerformed
+
+    private void nextStepButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextStepButtonActionPerformed
+        getNextStep();
+    }//GEN-LAST:event_nextStepButtonActionPerformed
+
+    private void prevStepButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prevStepButtonActionPerformed
+        getPrevStep();
+    }//GEN-LAST:event_prevStepButtonActionPerformed
+
+    private void stopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stopButtonActionPerformed
+        continiousCheckBox.setEnabled(true);
+        beginVisualizationButton.setEnabled(true);
+        completeAutomaticallyButton.setEnabled(false);
+        stopButton.setEnabled(false);
+        nextStepButton.setEnabled(false);
+        prevStepButton.setEnabled(false);
+        visual.stopped = true;
+        visual.stepIndex = visual.getStepsCount();
+        hintTextArea.setText(visual.getNextHint());
+        repaint();
+        timer.stop();
+    }//GEN-LAST:event_stopButtonActionPerformed
+
+
+    private void beginVisualizationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beginVisualizationButtonActionPerformed
+        boolean continuousRunning = continiousCheckBox.isSelected();
+        hintTextArea.setText("");
+        visual.stepIndex = 0;
+        repaint();
+        visual.stepIndex = -1;
+
+        continiousCheckBox.setEnabled(false);
+        beginVisualizationButton.setEnabled(false);
+        stopButton.setEnabled(true);
+        if (!continuousRunning) {
+            nextStepButton.setEnabled(true);
+            prevStepButton.setEnabled(true);
+            completeAutomaticallyButton.setEnabled(true);
+        }
+
+        if (continuousRunning) {
+            startVisualization();
+        }
+
+        resultTextArea.setText(visual.getResult());
+    }//GEN-LAST:event_beginVisualizationButtonActionPerformed
+
+    private void inputDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputDataButtonActionPerformed
+        inputDataDialog.setTitle("Введите данные");
+        inputDataDialog.setVisible(true);
+    }//GEN-LAST:event_inputDataButtonActionPerformed
+
     private void openButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openButtonActionPerformed
         JFileChooser fileChooser = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Text", "txt");
@@ -303,7 +373,7 @@ public class MainWindow extends JFrame {
         }
     }//GEN-LAST:event_openButtonActionPerformed
 
-    private void acceptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptButtonActionPerformed
+    private void aceeptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceeptButtonActionPerformed
         String text = inputTextArea.getText();
         if (text.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Файл пустой!");
@@ -312,76 +382,35 @@ public class MainWindow extends JFrame {
             startAlgorithm();
             hintTextArea.setText("");
         }
-    }//GEN-LAST:event_acceptButtonActionPerformed
+        inputDataDialog.setVisible(false);
+    }//GEN-LAST:event_aceeptButtonActionPerformed
 
-    private void beginVisualizationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beginVisualizationButtonActionPerformed
-        boolean continuousRunning = continiousCheckBox.isSelected();
-        hintTextArea.setText("");
-        visual.stepIndex = 0;
-        repaint();
-        visual.stepIndex = -1;
-
-        continiousCheckBox.setEnabled(false);
-        beginVisualizationButton.setEnabled(false);
+    private void completeAutomaticallyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_completeAutomaticallyButtonActionPerformed
         stopButton.setEnabled(true);
-        if (!continuousRunning) {
-            nextStepButton.setEnabled(true);
-            prevStepButton.setEnabled(true);
-        }
-
-        if (continuousRunning) {
-            startVisualization();
-        }
-
-        resultTextArea.setText(visual.getResult());
-
-    }//GEN-LAST:event_beginVisualizationButtonActionPerformed
-
-    private void continiousCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continiousCheckBoxActionPerformed
-        if (continiousCheckBox.isSelected()) {
-            nextStepButton.setEnabled(false);
-            prevStepButton.setEnabled(false);
-        }
-    }//GEN-LAST:event_continiousCheckBoxActionPerformed
-
-    private void stopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stopButtonActionPerformed
-        continiousCheckBox.setEnabled(true);
-        beginVisualizationButton.setEnabled(true);
-        stopButton.setEnabled(false);
+        completeAutomaticallyButton.setEnabled(false);
         nextStepButton.setEnabled(false);
         prevStepButton.setEnabled(false);
-        visual.stopped = true;
-        visual.stepIndex = visual.getStepsCount();
-        hintTextArea.setText(visual.getNextHint());
-        repaint();
-        timer.stop();
-    }//GEN-LAST:event_stopButtonActionPerformed
-
-    private void prevStepButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prevStepButtonActionPerformed
-        getPrevStep();
-    }//GEN-LAST:event_prevStepButtonActionPerformed
-
-    private void nextStepButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextStepButtonActionPerformed
-        getNextStep();
-    }//GEN-LAST:event_nextStepButtonActionPerformed
+        startVisualization();
+    }//GEN-LAST:event_completeAutomaticallyButtonActionPerformed
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton acceptButton;
+    private javax.swing.JButton aceeptButton;
     private javax.swing.JButton beginVisualizationButton;
+    private javax.swing.JButton completeAutomaticallyButton;
     private javax.swing.JCheckBox continiousCheckBox;
     private javax.swing.JPanel displayTab;
     private javax.swing.JScrollPane hintScrollPane;
     private javax.swing.JTextArea hintTextArea;
-    private javax.swing.JScrollPane inputScrollPane;
-    private javax.swing.JPanel inputTab;
+    private javax.swing.JButton inputDataButton;
+    private javax.swing.JDialog inputDataDialog;
     private javax.swing.JTextArea inputTextArea;
-    private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JTabbedPane modeTab;
     private javax.swing.JButton nextStepButton;
@@ -390,7 +419,6 @@ public class MainWindow extends JFrame {
     private javax.swing.JScrollPane resultScrolPane;
     private javax.swing.JPanel resultTab;
     private javax.swing.JTextArea resultTextArea;
-    private java.awt.Label spareLabel;
     private javax.swing.JButton stopButton;
     private java.awt.Label visualizationHintLabel;
     // End of variables declaration//GEN-END:variables
